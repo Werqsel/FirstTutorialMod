@@ -1,4 +1,7 @@
 {
   "item.tutorialmod.amethyst_redstone": "Amethyst Redstone",
-  "item.tutorialmod.amethyst_pickaxe": "Amethyst Pickaxe"
+  "item.tutorialmod.amethyst_pickaxe": "Amethyst Pickaxe",
+  "item.tutorialmod.amethyst_sword": "Amethyst Sword",
+  "item.tutorialmod.amethyst_axe": "Amethyst Axe",
+  "item.tutorialmod.amethyst_shovel": "Amethyst Shovel"
 }

@@ -7,6 +7,8 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 
+import java.util.logging.Logger;
+
 public class GuiditeMaterial implements ToolMaterial {
     public static final ToolMaterial INSTANCE = new GuiditeMaterial();
 
@@ -17,12 +19,15 @@ public class GuiditeMaterial implements ToolMaterial {
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 11.0F;
+        return 15.0F;
     }
 
     @Override
     public float getAttackDamage() {
         return 2.0F;
+    }
+    public float getAttackDamage(float Damage) {
+        return (float)Damage;
     }
 
     @Override

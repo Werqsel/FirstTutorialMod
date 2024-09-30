@@ -17,6 +17,7 @@
     }
   },
   "result": {
-    "item": "tutorialmod:amethyst_redstone"
+    "id": "tutorialmod:amethyst_redstone",
+    "count": 32
   }
 }

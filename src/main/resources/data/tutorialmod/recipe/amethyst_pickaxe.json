@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "Tools",
   "pattern": [
     "AAA",
     " S ",
@@ -14,6 +15,7 @@
     }
   },
   "result": {
-    "item": "tutorialmod:amethyst_pickaxe"
+    "id": "tutorialmod:amethyst_pickaxe",
+    "count": 1
   }
 }

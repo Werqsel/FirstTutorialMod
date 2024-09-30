@@ -11,17 +11,24 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import org.wesal.tutorialmod.TutorialMod;
 
+import static org.wesal.tutorialmod.item.ModItemsGroup.CUSTOM_ITEM_GROUP;
+import static org.wesal.tutorialmod.item.ModItemsGroup.CUSTOM_ITEM_GROUP_KEY;
+
 public class ModItems {
     // Get the event for modifying entries in the ingredients group.
     // And register an event handler that adds our suspicious amethyst_redstone.json to the ingredients group.
-    public static void initilization(){
-            ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(entries -> {
-                entries.add(AMETHYST_REDSTONE);
-            ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries1 -> {
-                entries1.add(PICKAXE);
-                inizilizationAddictions();
-            });
+    public static void initilization() {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(entries -> {
+            entries.add(AMETHYST_REDSTONE);
         });
+        ItemGroupEvents.modifyEntriesEvent(CUSTOM_ITEM_GROUP_KEY).register(entries1 -> {
+            entries1.add(PICKAXE);
+            entries1.add(SWORD);
+            entries1.add(SHOVEL);
+            entries1.add(AXE);
+            inizilizationAddictions();
+        });
+        Registry.register(Registries.ITEM_GROUP, CUSTOM_ITEM_GROUP_KEY, CUSTOM_ITEM_GROUP);
     }
     public static void inizilizationAddictions(){
         // Add the suspicious substance to the flammable block registry with a burn time of 30 seconds.
@@ -54,5 +61,8 @@ public class ModItems {
 
     //--------------------------Tools--------------------------------//
     public static final Item PICKAXE = register(new PickaxeItem(GuiditeMaterial.INSTANCE,new Item.Settings()), "amethyst_pickaxe");
+    public static final Item SWORD = register(new SwordItem(GuiditeMaterial.INSTANCE, new Item.Settings()), "amethyst_sword");
+    public static final Item SHOVEL = register(new ShovelItem(GuiditeMaterial.INSTANCE, new Item.Settings()), "amethyst_shovel");
+    public static final Item AXE = register(new AxeItem(GuiditeMaterial.INSTANCE, new Item.Settings()), "amethyst_axe");
 
 }
