@@ -10,6 +10,7 @@ import net.minecraft.registry.tag.TagKey;
 import java.util.logging.Logger;
 
 public class GuiditeMaterial implements ToolMaterial {
+    public static void initilization(){ }
     public static final ToolMaterial INSTANCE = new GuiditeMaterial();
 
     @Override
@@ -24,10 +25,7 @@ public class GuiditeMaterial implements ToolMaterial {
 
     @Override
     public float getAttackDamage() {
-        return 2.0F;
-    }
-    public float getAttackDamage(float Damage) {
-        return (float)Damage;
+        return 30.0F;
     }
 
     @Override

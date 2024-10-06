@@ -3,5 +3,9 @@
   "item.tutorialmod.amethyst_pickaxe": "Amethyst Pickaxe",
   "item.tutorialmod.amethyst_sword": "Amethyst Sword",
   "item.tutorialmod.amethyst_axe": "Amethyst Axe",
-  "item.tutorialmod.amethyst_shovel": "Amethyst Shovel"
+  "item.tutorialmod.amethyst_shovel": "Amethyst Shovel",
+  "item.tutorialmod.amethyst_chestplate": "Amethyst Chestplate",
+  "item.tutorialmod.amethyst_helmet": "Amethyst Helmet",
+  "item.tutorialmod.amethyst_boots": "Amethyst Boots",
+  "item.tutorialmod.amethyst_leggings": "Amethyst Leggings"
 }
