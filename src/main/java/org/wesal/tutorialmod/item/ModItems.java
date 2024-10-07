@@ -15,9 +15,14 @@ import org.wesal.tutorialmod.TutorialMod;
 import static org.wesal.tutorialmod.item.ModItemsGroup.*;
 
 public class ModItems {
+
+    //---------------------------FABRIC DOCUMENTATION------------------------//
+    //---------------------------FABRIC DOCUMENTATION------------------------//
+    //---------------------------FABRIC DOCUMENTATION------------------------//
+
     // Get the event for modifying entries in the ingredients group.
     // And register an event handler that adds our suspicious amethyst_redstone.json to the ingredients group.
-    public static void initilization() {
+    public static void initilization(){
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(entries -> {
             entries.add(AMETHYST_REDSTONE);
         });
@@ -29,7 +34,6 @@ public class ModItems {
             inizilizationAddictions();
         });
         Registry.register(Registries.ITEM_GROUP, CUSTOM_ITEM_GROUP_KEY, CUSTOM_ITEM_GROUP);
-
         ItemGroupEvents.modifyEntriesEvent(CUSTOM_ARMOR_GROUP_KEY).register(entries3 -> {
             entries3.add(AMETHYST_HELMET);
             entries3.add(AMETHYST_CHESTPLATE);
@@ -60,11 +64,12 @@ public class ModItems {
 
     public static Item register(Item item, String id) {
         // Create the identifier for the amethyst_redstone.json.
-        Identifier itemID = Identifier.of(TutorialMod.MOD_ID, id);
-        // Register the amethyst_redstone.json.
-        Item registeredItem = Registry.register(Registries.ITEM, itemID, item);
-        // Return the registered amethyst_redstone.json!
-        return registeredItem;
+//        Identifier itemID = Identifier.of(TutorialMod.MOD_ID, id);
+//        // Register the amethyst_redstone.json.
+//        Item registeredItem = Registry.register(Registries.ITEM, itemID, item);
+//        // Return the registered amethyst_redstone.json!
+//        return registeredItem;
+        return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID,id),item);
     }
 
     //--------------------------Tools--------------------------------//
@@ -106,5 +111,13 @@ public class ModItems {
                             .maxDamage(ArmorItem.Type.BOOTS
                                     .getMaxDamage(ModArmorMaterials.AMETHYST_DURABILITY_MULTIPLIER))),
             "amethyst_boots");
+
+    //---------------------------FABRIC DOCUMENTATION------------------------//
+    //---------------------------FABRIC DOCUMENTATION------------------------//
+    //---------------------------FABRIC DOCUMENTATION------------------------//
+
+
+
+    //---------------------------VIDEO TUTORIAL------------------------//
 
 }
