@@ -11,7 +11,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import org.wesal.tutorialmod.TutorialMod;
-import org.wesal.tutorialmod.item.ModItemsGroup;
 
 public class ModBlocks {
 

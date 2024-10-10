@@ -8,8 +8,13 @@
   "item.tutorialmod.amethyst_helmet": "Amethyst Helmet",
   "item.tutorialmod.amethyst_boots": "Amethyst Boots",
   "item.tutorialmod.amethyst_leggings": "Amethyst Leggings",
+
   "item.tutorialmod.pink_garnet": "Pink Garnet",
   "item.tutorialmod.raw_pink_garnet": "Raw Pink Garnet",
+
   "block.tutorialmod.pink_garnet_block": "Pink Garnet Block",
-  "block.tutorialmod.raw_pink_garnet_block": "Raw Pink Garnet Block"
+  "block.tutorialmod.raw_pink_garnet_block": "Raw Pink Garnet Block",
+
+  "itemgroup.tutorialmod.pink_garnet_items": "Pink Garnet Items",
+  "itemgroup.tutorialmod.pink_garnet_blocks": "Pink Garnet Blocks"
 }
