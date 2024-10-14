@@ -7,7 +7,7 @@ public class ModItems {
     //---------------------------FABRIC DOCUMENTATION------------------------//
 
     // Get the event for modifying entries in the ingredients group.
-    // And register an event handler that adds our suspicious amethyst_redstone.json to the ingredients group.
+    // And register an event handler that adds our suspicious amethyst_redstone.magic_block.json to the ingredients group.
     public static void initilization() {
 //        ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(entries -> {
 //            entries.add(AMETHYST_REDSTONE);
@@ -49,11 +49,11 @@ public class ModItems {
 //
 //
 //    public static Item register(Item item, String id) {
-//        // Create the identifier for the amethyst_redstone.json.
+//        // Create the identifier for the amethyst_redstone.magic_block.json.
 ////        Identifier itemID = Identifier.of(TutorialMod.MOD_ID, id);
-////        // Register the amethyst_redstone.json.
+////        // Register the amethyst_redstone.magic_block.json.
 ////        Item registeredItem = Registry.register(Registries.ITEM, itemID, item);
-////        // Return the registered amethyst_redstone.json!
+////        // Return the registered amethyst_redstone.magic_block.json!
 ////        return registeredItem;
 //        return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID,id),item);
 //    }

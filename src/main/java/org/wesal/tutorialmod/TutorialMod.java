@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.wesal.tutorialmod.block.ModBlocks;
 import org.wesal.tutorialmod.item.*;
+import org.wesal.tutorialmod.item.ModItemsGroup;
 
 public class TutorialMod implements ModInitializer {
 	public static final String MOD_ID = "tutorialmod";
