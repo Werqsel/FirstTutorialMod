@@ -23,6 +23,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.explosion.Explosion;
 import org.wesal.tutorialmod.item.ModItems;
+import org.wesal.tutorialmod.util.ModTags;
 
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class MagicBlock extends Block {
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         if (entity instanceof ItemEntity item){
-            if(item.getStack().isOf(ModItems.RAW_PINK_GARNET)){
+            if(isValidItem(item.getStack())){
                 item.setStack(new ItemStack(Items.DIAMOND, item.getStack().getCount()));
             }
         } else if (entity instanceof PlayerEntity player) {
@@ -53,6 +54,9 @@ public class MagicBlock extends Block {
         super.onSteppedOn(world, pos, state, entity);
     }
 
+    private boolean isValidItem(ItemStack stack) {
+        return stack.isIn(ModTags.Items.TRANSFORMABLE_ITEMS);
+    }
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
         tooltip.add(Text.translatable("block.tutorialmod.magic_block.tooltip"));
