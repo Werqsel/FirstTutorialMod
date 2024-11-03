@@ -42,6 +42,9 @@ public class TeleportWand extends Item {
                         (v3.getZ()+context.getSide().getOffsetZ()*0.5));
                 world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_ANVIL_STEP, BLOCKS);
         }
+            if (context.getPlayer().isSneaking()){
+                world.createExplosion(context.getPlayer(),v3.getX(),v3.getY(),v3.getZ(),5,false, World.ExplosionSourceType.NONE);
+            }
         return ActionResult.SUCCESS;
         }
 }

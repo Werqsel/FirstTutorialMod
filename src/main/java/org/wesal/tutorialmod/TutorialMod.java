@@ -2,6 +2,8 @@ package org.wesal.tutorialmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
+import org.joml.sampling.PoissonSampling;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.wesal.tutorialmod.block.ModBlocks;
@@ -22,6 +24,8 @@ public class TutorialMod implements ModInitializer {
 		ModItems.registerItem();
 		ModBlocks.registerBlocks();
 		ModItemsGroup.registerItemGrops();
+
+		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES,600);
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.

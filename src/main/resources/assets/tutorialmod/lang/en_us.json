@@ -23,5 +23,8 @@
 
   "item.tutorialmod.chisel": "Chisel",
   "item.tutorialmod.tpwand": "Teleport Wand",
-  "item.tutorialmod.magic_block" : "Magic Block"
+  "item.tutorialmod.magic_block" : "Magic Block",
+
+  "item.tutorialmod.flower": "Flower Food",
+  "item.tutorialmod.lightning_ashes": "Lightning Ashes"
 }
