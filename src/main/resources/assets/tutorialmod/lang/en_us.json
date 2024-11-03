@@ -26,5 +26,11 @@
   "item.tutorialmod.magic_block" : "Magic Block",
 
   "item.tutorialmod.flower": "Flower Food",
-  "item.tutorialmod.lightning_ashes": "Lightning Ashes"
+  "item.tutorialmod.starlight_ashes": "Starlight Ashes",
+
+  "block.tutorialmod.magic_block.tooltip": "The tutorial mod §lMAGICAL§r block",
+  "block.tutorialmod.magic_block.tooltip1": "§8Step on it :)§r",
+
+  "item.tutorialmod.chisel.tooltip": "Allow you to change sand,dirt,stone,cobblestone",
+  "item.tutorialmod.chisel.tooltip2": "Press Shift for more..."
 }

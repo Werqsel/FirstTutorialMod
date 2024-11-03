@@ -11,6 +11,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -23,6 +24,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.explosion.Explosion;
 import org.wesal.tutorialmod.item.ModItems;
 
+import java.util.List;
 import java.util.Map;
 
 import static java.lang.Thread.sleep;
@@ -47,8 +49,14 @@ public class MagicBlock extends Block {
             }
         } else if (entity instanceof PlayerEntity player) {
             player.setStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 4,20), player);
-            player.sendMessage(Text.of(new String("Like a Rabbit? Lol")));
         }
         super.onSteppedOn(world, pos, state, entity);
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+        tooltip.add(Text.translatable("block.tutorialmod.magic_block.tooltip"));
+        tooltip.add(Text.translatable("block.tutorialmod.magic_block.tooltip1"));
+        super.appendTooltip(stack, context, tooltip, options);
     }
 }
