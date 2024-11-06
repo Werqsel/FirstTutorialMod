@@ -32,5 +32,7 @@
   "block.tutorialmod.magic_block.tooltip1": "§8Step on it :)§r",
 
   "item.tutorialmod.chisel.tooltip": "Allow you to change sand,dirt,stone,cobblestone",
-  "item.tutorialmod.chisel.tooltip2": "Press Shift for more..."
+  "item.tutorialmod.chisel.tooltip2": "Press Shift for more...",
+
+  "block.tutorialmod.white_wood_lamp": "White Wood Lamp"
 }

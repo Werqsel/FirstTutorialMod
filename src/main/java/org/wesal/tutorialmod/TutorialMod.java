@@ -7,6 +7,7 @@ import org.joml.sampling.PoissonSampling;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.wesal.tutorialmod.block.ModBlocks;
+import org.wesal.tutorialmod.component.ModDataComponents;
 import org.wesal.tutorialmod.item.*;
 import org.wesal.tutorialmod.item.ModItemsGroup;
 
@@ -24,6 +25,7 @@ public class TutorialMod implements ModInitializer {
 		ModItems.registerItem();
 		ModBlocks.registerBlocks();
 		ModItemsGroup.registerItemGrops();
+		ModDataComponents.registerDataComponentType();
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES,600);
 		// This code runs as soon as Minecraft is in a mod-load-ready state.

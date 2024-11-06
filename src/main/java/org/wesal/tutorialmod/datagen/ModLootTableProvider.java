@@ -21,6 +21,9 @@ import org.wesal.tutorialmod.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
 
+import static org.wesal.tutorialmod.block.ModBlocks.*;
+import static org.wesal.tutorialmod.block.ModBlocks.WHITE_WOOD_PRESSURE_PLATE;
+
 public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     public ModLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
@@ -35,6 +38,19 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.PINK_GARNET_ORE, oreDrops(ModBlocks.PINK_GARNET_ORE, ModItems.RAW_PINK_GARNET));
         addDrop(ModBlocks.PINK_GARNET_DEEPSLATE_ORE, multipleOreDrops(ModBlocks.PINK_GARNET_ORE,ModItems.RAW_PINK_GARNET,1,5));
+
+        addDrop(WHITE_PLANKS);
+        addDrop(WHITE_WOOD_BUTTON);
+        addDrop(WHITE_WOOD_DOOR, doorDrops(WHITE_WOOD_DOOR));
+        addDrop(WHITE_WOOD_TRAPDOOR);
+        addDrop(WHITE_WOOD_FENCE);
+        addDrop(WHITE_WOOD_GATE);
+        addDrop(WHITE_WOOD_WALL);
+
+        addDrop(WHITE_WOOD_SLAB, slabDrops(WHITE_WOOD_SLAB));
+
+        addDrop(WHITE_WOOD_STAIRS);
+        addDrop(WHITE_WOOD_PRESSURE_PLATE);
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {

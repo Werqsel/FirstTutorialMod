@@ -9,6 +9,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import org.wesal.tutorialmod.TutorialMod;
+import org.wesal.tutorialmod.block.ModBlocks;
 
 import static org.wesal.tutorialmod.item.ModItems.*;
 import static org.wesal.tutorialmod.block.ModBlocks.*;
@@ -43,6 +44,24 @@ public class ModItemsGroup {
                         entries.add(PINK_GARNET_ORE);
                         entries.add(PINK_GARNET_DEEPSLATE_ORE);
                         entries.add(MAGIC_BLOCK);
+                    })
+                    .build());
+    public static final ItemGroup WHITE_WOOD_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(TutorialMod.MOD_ID,"white_wood_group"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.tutorialmod.white_wood_group"))
+                    .icon(() -> new ItemStack(WHITE_PLANKS))
+                    .entries((displayContext, entries) -> {
+                        entries.add(WHITE_PLANKS);
+                        entries.add(WHITE_WOOD_BUTTON);
+                        entries.add(WHITE_WOOD_DOOR);
+                        entries.add(WHITE_WOOD_TRAPDOOR);
+                        entries.add(WHITE_WOOD_FENCE);
+                        entries.add(WHITE_WOOD_GATE);
+                        entries.add(WHITE_WOOD_WALL);
+                        entries.add(WHITE_WOOD_SLAB);
+                        entries.add(WHITE_WOOD_STAIRS);
+                        entries.add(WHITE_WOOD_PRESSURE_PLATE);
+                        entries.add(WHITE_WOOD_LAMP);
                     })
                     .build());
 

@@ -24,5 +24,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(PINK_GARNET_DEEPSLATE_ORE)
                 .add(PINK_GARNET_ORE);
+
+        getOrCreateTagBuilder(BlockTags.FENCES).add(WHITE_WOOD_FENCE);
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(WHITE_WOOD_GATE);
+        getOrCreateTagBuilder(BlockTags.WALLS).add(WHITE_WOOD_WALL);
     }
 }

@@ -18,6 +18,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.world.World;
+import org.wesal.tutorialmod.component.ModDataComponents;
 
 import java.util.List;
 import java.util.Map;
@@ -50,6 +51,8 @@ public class ChiselItem extends Item {
                         item -> context.getPlayer().sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
 
                 world.playSound(null,context.getBlockPos(), SoundEvents.BLOCK_AMETHYST_BLOCK_FALL, SoundCategory.BLOCKS);
+
+                context.getStack().set(ModDataComponents.COORDINATES_BLOCK, context.getBlockPos());
             }
         }
         return ActionResult.SUCCESS;
@@ -61,6 +64,10 @@ public class ChiselItem extends Item {
         } else {
             tooltip.add(Text.translatable("item.tutorialmod.chisel.tooltip2"));
         }
+        if(stack.get(ModDataComponents.COORDINATES_BLOCK) != null){
+            tooltip.add(Text.literal("Last block changed at "+ stack.get(ModDataComponents.COORDINATES_BLOCK)));
+        }
+
         super.appendTooltip(stack, context, tooltip, type);
     }
 }
