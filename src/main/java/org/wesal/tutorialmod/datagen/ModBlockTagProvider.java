@@ -4,6 +4,8 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import org.wesal.tutorialmod.util.ModTags;
+
 import java.util.concurrent.CompletableFuture;
 import static org.wesal.tutorialmod.block.ModBlocks.*;
 
@@ -28,5 +30,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.FENCES).add(WHITE_WOOD_FENCE);
         getOrCreateTagBuilder(BlockTags.FENCE_GATES).add(WHITE_WOOD_GATE);
         getOrCreateTagBuilder(BlockTags.WALLS).add(WHITE_WOOD_WALL);
+
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_PINK_GARNET_TOOL).addTag(BlockTags.NEEDS_IRON_TOOL).add(MAGIC_BLOCK);
     }
 }

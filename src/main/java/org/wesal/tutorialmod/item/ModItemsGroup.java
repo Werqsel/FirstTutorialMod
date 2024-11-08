@@ -64,6 +64,19 @@ public class ModItemsGroup {
                         entries.add(WHITE_WOOD_LAMP);
                     })
                     .build());
+    public static final ItemGroup PINK_GARNET_TOOLS_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(TutorialMod.MOD_ID,"pink_garnet_tools_group"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.tutorialmod.pink_garnet_tools_group"))
+                    .icon(() -> new ItemStack(PINK_GARNET_PICKAXE))
+                    .entries((displayContext, entries) -> {
+                        entries.add(PINK_GARNET_SWORD);
+                        entries.add(PINK_GARNET_PICKAXE);
+                        entries.add(PINK_GARNET_AXE);
+                        entries.add(PINK_GARNET_HOE);
+                        entries.add(PINK_GARNET_SHOVEL);
+                    })
+                    .build());
+
 
 
     public static void registerItemGrops(){

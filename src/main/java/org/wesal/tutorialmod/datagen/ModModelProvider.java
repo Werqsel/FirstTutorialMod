@@ -50,5 +50,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.STARLIGHT_ASHES, Models.GENERATED);
         itemModelGenerator.register(ModItems.TELEPORT_WAND, Models.GENERATED);
         itemModelGenerator.register(ModItems.FLOWERFOOD, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.PINK_GARNET_SWORD,Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PINK_GARNET_PICKAXE,Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PINK_GARNET_AXE,Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PINK_GARNET_SHOVEL,Models.HANDHELD);
+        itemModelGenerator.register(ModItems.PINK_GARNET_HOE,Models.HANDHELD);
     }
 }
