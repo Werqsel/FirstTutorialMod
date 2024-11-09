@@ -10,7 +10,9 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import org.wesal.tutorialmod.TutorialMod;
 import org.wesal.tutorialmod.item.custom.ChiselItem;
+import org.wesal.tutorialmod.item.custom.HammerItem;
 import org.wesal.tutorialmod.item.custom.TeleportWand;
+import org.wesal.tutorialmod.item.custom.TravelerSword;
 
 public class ModItems {
 
@@ -21,7 +23,7 @@ public class ModItems {
     public static final Item FLOWERFOOD = register("flower", new Item(new Item.Settings().food(ModFoodComponents.COUILFLOWER)));
     public static final Item STARLIGHT_ASHES = register("starlight_ashes", new Item(new Item.Settings()));
 //    public static final Item LIGHTNING_DRINK = register("lightning_drink", new Item(new Item.Settings().food(ModFoodComponents.LIGHTNING_DRINK)));
-public static final Item PINK_GARNET_SWORD = register("pink_garnet_sword",
+    public static final Item PINK_GARNET_SWORD = register("pink_garnet_sword",
         new SwordItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
                 .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 3, -2.4f))));
     public static final Item PINK_GARNET_PICKAXE = register("pink_garnet_pickaxe",
@@ -36,6 +38,14 @@ public static final Item PINK_GARNET_SWORD = register("pink_garnet_sword",
     public static final Item PINK_GARNET_HOE = register("pink_garnet_hoe",
             new HoeItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
                     .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 0, -3f))));
+
+    public static final Item PINK_GARNET_HAMMER = register("pink_garnet_hammer",
+            new HammerItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 7, -1.8f))));
+
+    public static final Item TRAVELER_SWORD = register("traveler_sword",
+            new TravelerSword(ModToolMaterials.PINK_GARNET, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 10, -1.4f))));
 
     public static void registerItem(){
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(myentries -> {

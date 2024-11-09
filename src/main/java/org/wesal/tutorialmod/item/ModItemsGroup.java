@@ -74,6 +74,8 @@ public class ModItemsGroup {
                         entries.add(PINK_GARNET_AXE);
                         entries.add(PINK_GARNET_HOE);
                         entries.add(PINK_GARNET_SHOVEL);
+                        entries.add(PINK_GARNET_HAMMER);
+                        entries.add(TRAVELER_SWORD);
                     })
                     .build());
 
